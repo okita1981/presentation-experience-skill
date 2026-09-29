@@ -28,7 +28,7 @@ When you add or amend an example, invent its data.
   Derive the real values from the source document.
 - **Not a template to instantiate.** If two documents end up with the same screen, the fault is
   not in these files but in having skipped composition.
-- **Not exhaustive.** Four mechanisms are covered. The other six are no less legitimate; they
+- **Not exhaustive.** Four of the nine mechanisms are covered. The other five are no less legitimate; they
   just have no worked example yet. Absence here is not a reason to avoid a mechanism, and
   presence here is not a reason to reach for one the source has not earned.
 

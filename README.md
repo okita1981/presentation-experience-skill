@@ -25,27 +25,46 @@ argument rather than a model is a legitimate outcome, reported as such.
 
 ## Install
 
-Copy the skill folder into your agent's skills directory.
+Clone the repository, then copy the skill folder into your agent's skills directory. Keep the
+folder name: an agent skill's `name` and its directory name must match, which is why the skill
+sits in a subfolder here rather than at the repository root.
+
+```bash
+git clone https://github.com/okita1981/presentation-experience-skill.git
+cd presentation-experience-skill
+```
 
 **Codex**
 
 ```bash
+mkdir -p ~/.codex/skills
 cp -r build-presentation-experience ~/.codex/skills/
+node ~/.codex/skills/build-presentation-experience/scripts/validate-skill.mjs
 ```
 
 **Claude Code**
 
 ```bash
+mkdir -p ~/.claude/skills
 cp -r build-presentation-experience ~/.claude/skills/
+node ~/.claude/skills/build-presentation-experience/scripts/validate-skill.mjs
 ```
 
-Then verify:
+**Windows PowerShell** — use `.codex` in place of `.claude` for Codex.
 
-```bash
-node build-presentation-experience/scripts/validate-skill.mjs
+```powershell
+git clone https://github.com/okita1981/presentation-experience-skill.git
+cd presentation-experience-skill
+New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse -Force build-presentation-experience "$HOME\.claude\skills\"
+node "$HOME\.claude\skills\build-presentation-experience\scripts\validate-skill.mjs"
 ```
 
-It should report `"ok": true` with no errors.
+The last line runs the validator **against the installed copy**, so it checks the install rather
+than the clone. It should report `"ok": true` with no errors.
+
+Replacing an earlier install: delete `<skills dir>/build-presentation-experience` first. Copying
+over a folder that is already there nests the new copy inside the old one.
 
 ## Use
 
