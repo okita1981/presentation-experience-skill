@@ -64,7 +64,8 @@ The last line runs the validator **against the installed copy**, so it checks th
 than the clone. It should report `"ok": true` with no errors.
 
 Replacing an earlier install: delete `<skills dir>/build-presentation-experience` first. Copying
-over a folder that is already there nests the new copy inside the old one.
+over a folder that is already there merges into it, so a file dropped in a later version stays
+behind.
 
 ## Use
 
