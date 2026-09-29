@@ -125,7 +125,8 @@ environment, so treat the manual route as normal rather than exceptional.
 width and at 375px:
 
 - **Collisions.** For every cue, and for every state of every mechanism, compare the bounding
-  boxes of visible `[data-verify-box]` elements pairwise and confirm no unintended overlap.
+  boxes of visible `[data-verify-box]` elements pairwise and confirm no unintended overlap. Skip
+  pairs where one element is an ancestor of the other; a container always overlaps its child.
   Narrow widths are where this actually breaks.
 - **No horizontal scroll.** `document.documentElement.scrollWidth` must not exceed
   `window.innerWidth`.

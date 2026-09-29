@@ -31,7 +31,8 @@ Conditions 1–15 keep the result safe and honest. They do not make it worth rem
 
 16. There is a signature moment where the audience sees something the source document alone could
     not show them: a relation, difference, change, or calculated result that is not visible before
-    the operation and is understood after it. Visual impact without that change does not pass.
+    the operation and is understood after it. Whatever a reader already gets from the source's own
+    tables or figures does not count, and visual impact without that change does not pass.
 17. The speaker can say in one sentence what the audience should remember, and the experience is
     built to lead into it.
 18. A human reviewer would want to keep, forward, or reuse the file — not only view it once.

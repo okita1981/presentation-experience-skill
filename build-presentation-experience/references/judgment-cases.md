@@ -100,6 +100,27 @@ Each case: the source situation · the decision · the outcome · the lesson · 
 - *Rehearsal on a constructed document; no human reviewed it as client work. The failure mode is
   real, the setting was not.*
 
+### 8. One wrong figure in a worked example is not a reason to drop the example
+
+- **Source situation:** a document explaining a score built as a weighted sum of seven criteria.
+  Its worked example was correct in every input, coefficient, and per-criterion term; only the
+  stated total was wrong. The document's point was that an overall score can stay low because of
+  one specific criterion, and that the numbers show which.
+- **Decision:** the example was distrusted as a whole and removed. The starting state became a
+  neutral one, since there was no source value left to return to.
+- **Outcome:** the human verdict on the first build was “so-so; the design is poor and nothing
+  moves,” and on the design revision “better than before, but still so-so as an experience and as
+  design.” It was not judged ready to show people. The Skill's use of a mechanism example in this
+  run was re-recorded from “helped” to “no difference.”
+- **Lesson:** *Interpretation, not a recorded human finding:* the verdict was on the whole
+  experience, and dropping the example was not confirmed as its only cause. It is nonetheless a
+  likely one: with the example gone, the source's own point was no longer on screen. When one
+  figure is wrong and the parts are right, recompute the figure from the parts and keep the
+  example, so the argument survives.
+- **Stops at:** if the error cannot be isolated, or recomputing needs an assumption the source
+  does not give, dropping the example is right. Say what was corrected and why on the record
+  (conditions 7 and 14).
+
 ## Established techniques from outside this project
 
 These are well-known ideas in information design, stated as techniques. Apply them only where the

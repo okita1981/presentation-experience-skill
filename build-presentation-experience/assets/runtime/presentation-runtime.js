@@ -106,7 +106,7 @@
 
     function ownsKeys(el) {
       if (!el || el === document.body) return false;
-      if (el.isContentEditable || el.closest("[data-own-keys]")) return true;
+      if (el.isContentEditable || (el.closest && el.closest("[data-own-keys]"))) return true;
       const tag = el.tagName;
       if (tag === "TEXTAREA" || tag === "SELECT") return true;
       if (tag === "INPUT") return !["button", "submit", "reset", "checkbox", "radio"].includes(el.type);

@@ -65,6 +65,8 @@ Do not borrow a comparison, sequence, or conclusion the document does not make t
 - Keep supporting text subordinate; if a sentence must be read before continuing, reconsider it.
 - Let whitespace separate meanings, not merely decorate a canvas.
 - Recompose mobile layouts into a new reading order. Do not shrink a desktop stage.
+- A grid column keeps its width when its content is `display:none`, so a hidden column can still push
+  the stage past the viewport. Define the columns per state so hidden ones do not exist.
 
 ## Type and density
 
