@@ -117,8 +117,36 @@ Run source, copy, visual-meaning, brand, and coverage audits. Then run:
 
     node scripts/verify.mjs path/to/experience.html
 
-If Playwright is unavailable, the verifier reports a blocker. Use an available browser tool to
-perform the same checks; do not claim they ran automatically.
+If Playwright is unavailable, the verifier reports a blocker. That is not a reason to skip
+verification — it is a reason to do it by hand and say so. This is the common case in a hosted
+environment, so treat the manual route as normal rather than exceptional.
+
+**Manual equivalent.** Open the file in whatever browser tool you have and check, at a desktop
+width and at 375px:
+
+- **Collisions.** For every cue, and for every state of every mechanism, compare the bounding
+  boxes of visible `[data-verify-box]` elements pairwise and confirm no unintended overlap.
+  Narrow widths are where this actually breaks.
+- **No horizontal scroll.** `document.documentElement.scrollWidth` must not exceed
+  `window.innerWidth`.
+- **Text fits.** No element where `scrollWidth` exceeds `clientWidth`.
+- **Offline.** No entry in `performance.getEntriesByType("resource")` outside
+  `file:`, `data:`, `blob:`, `about:`.
+- **Console.** No errors and no page errors.
+- **Reverse and Reset.** Navigate forward through every cue, then back; Reset must return the
+  opening state exactly, including mechanism state.
+- **Keyboard.** Arrow keys advance and reverse after a control has been clicked and holds focus;
+  every operable control is reachable by Tab with visible focus.
+- **Reduced motion.** The end state of every cue is complete and legible with motion suppressed.
+- **Accessible names.** Every control reports a name; a button whose text sits in nested spans
+  can come out nameless.
+
+Drive this from the DOM rather than from screenshots. A preview pane can show a stale frame, and
+a screenshot taken mid-transition reads as a defect that is not there — both have happened here.
+Measure after the transition has settled.
+
+**Report which route you took.** "Checked manually against the DOM because Playwright was not
+available" is an honest result. "Verified" without saying how is not.
 
 ## 7b. Ambition review
 

@@ -1,6 +1,6 @@
 ---
 name: build-presentation-experience
-description: Convert an existing PowerPoint/PPTX, PDF, or Word document into a source-grounded, presenter-operated, single-file HTML experience. Use when a speaker should reveal evidence, compare choices, filter conditions, inspect details, traverse a structure, or change source-supported inputs while explaining. Do NOT use for summaries, translations, ordinary websites, slide editing, dashboards, video or voice narration, or creating a new deck without a source document.
+description: Convert an existing PowerPoint/PPTX, PDF, or Word document into a source-grounded, presenter-operated, single-file HTML experience. Use when a speaker should reveal evidence, compare choices, filter conditions, inspect details, traverse a structure, or change source-supported inputs while explaining. Japanese requests that should trigger it include 「この資料をプレゼン用のインタラクティブHTMLにして」「提案書を話しながら操作できる形にして」「数字の根拠をクリックで開けるようにして」「PowerPointより分かりやすい説明体験を作って」. Do NOT use for summaries, translations, ordinary websites, slide editing, dashboards, video or voice narration, or creating a new deck without a source document.
 ---
 
 # Build Presentation Experience
