@@ -1,0 +1,13 @@
+interface:
+  display_name: 資料からインタラクティブ・プレゼンをつくる
+  short_description: 既存資料を、話者操作型のインタラクティブHTMLプレゼンへ変換する
+  default_prompt: $build-presentation-experience を使って、この資料を話者操作型のインタラクティブHTMLプレゼンへ変換してください。目的・聞き手・所要時間・話者を確認し、特段の指定がなければ内部レビューを行いながら完成版まで連続して制作してください。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
